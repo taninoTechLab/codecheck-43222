@@ -1,8 +1,5 @@
 package codecheck;
 
-import java.io.IOException;
-import javax.servlet.http.HttpServlet;
-
 public class App {
 	public static void main(String[] args) {
 

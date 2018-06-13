@@ -8,6 +8,6 @@ public class App {
 		}
 
 		println("test");
-
+		println("test2");
 	}
 }

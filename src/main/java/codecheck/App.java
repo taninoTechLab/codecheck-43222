@@ -15,12 +15,12 @@ public class App {
 	public static void main(String[] args) throws Exception {
 
 		for (int i = 0, l = args.length; i < l; i++) {
-			String output = String.format("argv[%s]: %s", i, args[i]);
+//			String output = String.format("argv[%s]: %s", i, args[i]);
 			StringBuilder url = new StringBuilder().append("http://challenge-server.code-check.io/api/hash?q=");
 
 			String result = getResult(url.append(args[i]).toString());
-			System.out.println(result);
-			System.out.println(output);
+//			System.out.println(result);
+//			System.out.println(output);
 
 			ScriptEngineManager manager = new ScriptEngineManager();
 			ScriptEngine engine = manager.getEngineByName("JavaScript");
@@ -32,9 +32,6 @@ public class App {
 					engine.getClass().getName().equals("com.sun.script.javascript.RhinoScriptEngine"));
 			System.out.println(map.get("hash").toString());
 		}
-
-
-
 	}
 
 	public static String getResult(String urlString) {

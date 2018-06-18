@@ -29,8 +29,8 @@ public class App {
 			Object obj = engine.eval(String.format("(%s)", result));
 			// Rhino は、jdk1.6,7までの JavaScript エンジン。jdk1.8は「jdk.nashorn.api.scripting.NashornScriptEngine」
 			Map<String, Object> map = jsonToMap(obj,
-					engine.getClass().getName().equals("hash"));
-			System.out.println(map.toString());
+					engine.getClass().getName().equals("com.sun.script.javascript.RhinoScriptEngine"));
+			System.out.println(map.get("hash").toString());
 		}
 
 

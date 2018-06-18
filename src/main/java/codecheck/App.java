@@ -9,12 +9,13 @@ public class App {
 	public static void main(String[] args) {
 
 
-		System.out.println("test");
-		String result = getResult("http://challenge-server.code-check.io/");
-		System.out.println(result);
 
 		for (int i = 0, l = args.length; i < l; i++) {
 			String output = String.format("argv[%s]: %s", i, args[i]);
+			String url = "http://challenge-server.code-check.io/api/hash?q=";
+
+			String result = getResult(url + output);
+			System.out.println(result);
 			System.out.println(output);
 		}
 	}
